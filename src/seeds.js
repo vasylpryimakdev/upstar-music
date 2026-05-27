@@ -3,8 +3,8 @@ import faker from 'faker';
 import { MongoClient } from 'mongodb';
 import { GENRES } from './constants';
 
-const MINIMUM_ARTISTS = 2;
-const ARTISTS_TO_ADD = 15;
+const MINIMUM_ARTISTS = 200;
+const ARTISTS_TO_ADD = 15000;
 
 let artistsCollection;
 

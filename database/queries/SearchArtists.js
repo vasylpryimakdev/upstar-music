@@ -15,7 +15,7 @@ module.exports = (criteria, sortProperty, offset = 0, limit = 20) => {
     .skip(offset)
     .limit(limit);
 
-  return Promise.all([query, Artist.countDocuments()])
+  return Promise.all([query, Artist.find(buildQuery(criteria)).countDocuments()])
     .then((results) => {
       return {
         all: results[0],
